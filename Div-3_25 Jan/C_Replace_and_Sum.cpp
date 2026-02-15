@@ -13,17 +13,17 @@ int main()
     {
         int n, q;
         cin >> n >> q;
-        vector<ll> a(n + 1), b(n + 1), c(n + 1);
+        vector<ll> a(n + 1), b(n + 1);
         for (int i = 1; i <= n; i++)
         {
             cin >> a[i];
-            c[i] = a[i];
+            
         }
         for (int i = 1; i <= n; i++)
         {
             cin >> b[i];
-            if (c[i] < b[i])
-                c[i] = b[i];
+            if (a[i] < b[i])
+                a[i] = b[i];
         }
         int sum = 0;
         vector<int> res;
@@ -34,7 +34,7 @@ int main()
 
             for (int i = l; i <= r; i++)
             {
-                sum += c[i];
+                sum += a[i];
                
             }
             res.pb(sum);
