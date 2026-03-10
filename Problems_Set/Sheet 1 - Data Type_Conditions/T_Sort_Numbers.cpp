@@ -6,19 +6,19 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    set<int> s;
     int a, b, c;
     cin >> a >> b >> c;
-    s.insert(a);
-    s.insert(b);
-    s.insert(c);
 
-    for (auto i : s)
-        cout << i << "\n";
+    vector<int> v = {a, b, c};
 
-    cout << "\n"
-         << a << "\n"
+    sort(v.begin(), v.end());
+
+    for (int x : v)
+        cout << x << "\n";
+
+    cout << "\n";
+
+    cout << a << "\n"
          << b << "\n"
          << c << "\n";
          
