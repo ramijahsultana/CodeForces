@@ -7,12 +7,12 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int x, p;
-    cin >> x >> p;
-
-    double o = p/(1- x/100.0);
-    
-    cout << fixed << setprecision(2) << o << "\n";
+    int a,b;
+    cin >> a >> b;
+    if(abs(a-b) <= 1 && (a+b) > 0)
+        cout << "YES\n";
+    else
+        cout << "NO\n"; 
 
     return 0;
 }

@@ -7,12 +7,13 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int x, p;
-    cin >> x >> p;
+    char a;
+    cin >> a;
 
-    double o = p/(1- x/100.0);
-    
-    cout << fixed << setprecision(2) << o << "\n";
+    if(a >= 'a' && a < 'z')
+        cout << char(a+1) << "\n";
+    else
+        cout << "a\n";    
 
     return 0;
 }
