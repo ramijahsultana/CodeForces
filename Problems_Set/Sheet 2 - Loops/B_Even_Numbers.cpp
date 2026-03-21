@@ -9,8 +9,17 @@ int main()
 
     int n;
     cin >> n;
-    for(int i=2; i<=n; i+=2)
-        cout << i << "\n";
+   bool ok = false;
 
+    for(int i = 2; i <= n; i += 2)
+    {
+        cout << i << "\n";
+        ok = true;
+    }
+
+    if(!ok)
+    {
+        cout << "-1\n";
+    }
     return 0;
 }
