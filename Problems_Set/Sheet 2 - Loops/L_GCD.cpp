@@ -7,16 +7,11 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t;
-	cin >> t;
-	while(t--)
-	{
-	    int x, y;
-	    cin >> x >> y;
-	    
-	    int z = x/10;
-	    cout << z*y << "\n";
-	}
+    int x, y;
+    cin >> x >> y;
+
+    int val = __gcd(x, y);
+    cout << val << "\n";
 
     return 0;
 }
