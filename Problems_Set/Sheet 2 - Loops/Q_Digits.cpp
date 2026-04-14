@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define pb push_back
+
 int main()
 {
     ios::sync_with_stdio(false);
@@ -13,13 +13,20 @@ int main()
     {
         ll n;
         cin >> n;
-        while(n > 0)
+
+        if(n == 0)
         {
-            cout << n%10 << " ";
-            n /= 10;
+            cout << 0;
+        }
+        else
+        {
+            while(n > 0)
+            {
+                cout << n % 10 << " ";
+                n /= 10;
+            }
         }
         cout << "\n";
-
     }
 
     return 0;
