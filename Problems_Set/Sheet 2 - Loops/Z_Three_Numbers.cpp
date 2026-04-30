@@ -30,4 +30,3 @@ int main()
     return 0;
 }
 //test the cases
-/*
