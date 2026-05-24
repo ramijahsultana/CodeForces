@@ -1,14 +1,7 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define pb push_back
-
-ll fibo(int n)
-{
-    if(n <= 1)
-        return n;
-    return fibo(n-1) + fibo(n-2);
-}
 int main()
 {
     ios::sync_with_stdio(false);
@@ -16,7 +9,28 @@ int main()
 
     ll n;
     cin >> n;
-    cout << fibo(n-1) << endl;
+
+    ll a = 0, b = 1, c;
+
+    if (n == 1)
+    {
+        cout << 0 << '\n';
+    }
+    else if (n == 2)
+    {
+        cout << 1 << '\n';
+    }
+    else
+    {
+        for (int i = 3; i <= n; i++)
+        {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        cout << b << '\n';
+    }
 
     return 0;
 }
