@@ -1,13 +1,30 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define pb push_back
+
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    int n;
+    cin >> n;
 
-    
+    int ans = INT_MAX;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+
+        int cnt = 0;
+
+        while (x % 2 == 0)
+        {
+            cnt++;
+            x /= 2;
+        }
+
+        ans = min(ans, cnt);
+    }
+
+    cout << ans << endl;
 
     return 0;
 }
