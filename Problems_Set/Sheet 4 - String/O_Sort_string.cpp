@@ -1,20 +1,32 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define pb push_back
+
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int n;
-    cin >> n;
     string s;
-    cin >> s;
-    sort(s.begin(), s.end());
 
-    cout << s << "\n";
+    cin >> n >> s;
 
-    
+    int freq[26] = {0};
+
+    for(char c : s)
+    {
+        freq[c - 'a']++;
+    }
+
+    for(int i = 0; i < 26; i++)
+    {
+        while(freq[i]--)
+        {
+            cout << char(i + 'a');
+        }
+    }
+
+    cout << '\n';
+
     return 0;
 }

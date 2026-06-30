@@ -1,0 +1,1 @@
+{"name":"Local: O_Sort_string","url":"d:\\Phitron\\CodeForces\\Problems_Set\\Sheet 4 - String\\O_Sort_string.cpp","tests":[{"id":1782750734517,"input":"4\ndeab\n","output":"abde\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\CodeForces\\Problems_Set\\Sheet 4 - String\\O_Sort_string.cpp","group":"local","local":true}
