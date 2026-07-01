@@ -11,22 +11,21 @@ int main()
 
     cin >> n >> s;
 
-    int freq[26] = {0};
-
-    for(char c : s)
+    for(int i = 0; i < n; i++)
     {
-        freq[c - 'a']++;
-    }
-
-    for(int i = 0; i < 26; i++)
-    {
-        while(freq[i]--)
+        for(int j = i + 1; j < n-1; j++)
         {
-            cout << char(i + 'a');
+            if(s[i] < s[j])
+            {
+                swap(s[i], s[j]);
+            }
         }
     }
 
-    cout << '\n';
+    for(int i = 0; i < n; i++)
+    {
+        cout << s[i];
+    }
 
     return 0;
 }
