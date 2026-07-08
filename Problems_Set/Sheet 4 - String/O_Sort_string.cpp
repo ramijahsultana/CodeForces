@@ -11,20 +11,19 @@ int main()
 
     cin >> n >> s;
 
-    for(int i = 0; i < n; i++)
+   int freq[26] = {0};
+
+    for(char c : s)
     {
-        for(int j = i + 1; j < n-1; j++)
-        {
-            if(s[i] < s[j])
-            {
-                swap(s[i], s[j]);
-            }
-        }
+        freq[c - 'a']++;
     }
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < 26; i++)
     {
-        cout << s[i];
+        while(freq[i]--)
+        {
+            cout << char(i + 'a');
+        }
     }
 
     return 0;
