@@ -8,23 +8,23 @@ int main()
 
     int n;
     string s;
-
     cin >> n >> s;
 
-   int freq[26] = {0};
+    int freq[26] = {0};
 
-    for(char c : s)
+    for (char c : s)
     {
         freq[c - 'a']++;
     }
 
-    for(int i = 0; i < 26; i++)
+    string ans;
+    ans.reserve(n);
+
+    for (int i = 0; i < 26; i++)
     {
-        while(freq[i]--)
-        {
-            cout << char(i + 'a');
-        }
+        ans.append(freq[i], char('a' + i));
     }
 
+    cout << ans;
     return 0;
 }
