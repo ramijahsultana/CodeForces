@@ -1,36 +1,40 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define pb push_back
+
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int s,n;
+    int s, n;
     cin >> s >> n;
-    bool yes = false;
-    while(n--)
+
+    vector<pair<int, int>> dragons;
+
+    for (int i = 0; i < n; i++)
     {
         int x, y;
         cin >> x >> y;
-        if(x<s)
-        {
-            s+=y;
-            yes =  true;
-        }
-        else
-        {
-            yes = false;
-        }
-
+        dragons.push_back({x, y});
     }
 
-    if(yes == true)
-        cout << "YES\n";
-    else
-        cout << "NO\n";
-        
-        
+    sort(dragons.begin(), dragons.end());
+
+    for (auto dragon : dragons)
+    {
+        int x = dragon.first;
+        int y = dragon.second;
+
+        if (s <= x)
+        {
+            cout << "NO\n";
+            return 0;
+        }
+
+        s += y;
+    }
+
+    cout << "YES\n";
+
     return 0;
 }
