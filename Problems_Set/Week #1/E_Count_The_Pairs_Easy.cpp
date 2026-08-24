@@ -9,25 +9,13 @@ int main()
 
     int n;
     cin >> n;
-    set<int> s;
-    for(int i=0; i<n; i++)
-    {
-        int x;
-        cin >> x;
-        s.insert(x);
-    }
-
-    cout << s.size() << endl;
-    if(s.size()%2 == 0)
-    {
-        int c = s.size()/2;
-        cout << c << endl;
-    }
-    else
-    {
-        int c = s.size()/2;
-        cout << c+1 << endl;
-    }
+    int a, b, c;
+    cin >> a >> b >> c;     
+    if(max(a, c) <= b) {
+            cout << "Yes\n";
+        } else {
+            cout << "No\n";
+        }
 
     return 0;
 }
